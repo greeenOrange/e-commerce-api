@@ -10,17 +10,7 @@ app.use(cors());
 app.use(express.json())
 
 
-async function run() {
-    try {
-      await client.connect();
-} 
-  finally {
-    //   await client.close();
-    }
-  }
-  run().catch(console.dir);
-  
-  app.get('/', (req,res) =>{
+app.get('/', (req,res) =>{
     res.send('daily-e-commerce')
 });
 app.listen(port, () =>{
